@@ -40,45 +40,72 @@
 
     var oneId = document.getElementById('one');
     oneId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 1;
     })
 
     var zeroId = document.getElementById('zero');
     zeroId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 0;
     })
 
     var eightId = document.getElementById('eight');
     eightId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 8;
     })
 
     var fiveId = document.getElementById('five');
     fiveId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 5;
     })
 
     var twoId = document.getElementById('two');
     twoId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 2;
     })
 
     var decimalId = document.getElementById('decimal');
     decimalId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = '.';
     })
     var nineId = document.getElementById('nine');
     nineId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 9;
     })
 
     var sixId = document.getElementById('six');
     sixId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 6;
     })
 
     var threeId = document.getElementById('three');
     threeId.addEventListener('click', function() {
+        if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
+            calScreen.innerHTML = null;
+        }
         calScreen.innerHTML = calScreen.innerHTML + 3;
     })
     
