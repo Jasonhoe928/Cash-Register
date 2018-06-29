@@ -27,7 +27,10 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
+        if(calScreen.innerHTML.length <= 14) {
             calScreen.innerHTML = calScreen.innerHTML + 7;
+        }
+            
     })
 
     var fourId = document.getElementById('four');
@@ -35,7 +38,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 4;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 4;
+        }
     })
 
     var oneId = document.getElementById('one');
@@ -43,7 +48,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 1;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 1;
+        }
     })
 
     var zeroId = document.getElementById('zero');
@@ -51,7 +58,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 0;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 0;
+        }
     })
 
     var eightId = document.getElementById('eight');
@@ -59,7 +68,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 8;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 8;
+        }
     })
 
     var fiveId = document.getElementById('five');
@@ -67,7 +78,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 5;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 5;
+        }
     })
 
     var twoId = document.getElementById('two');
@@ -75,7 +88,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 2;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 2;
+        }
     })
 
     var decimalId = document.getElementById('decimal');
@@ -83,14 +98,18 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = '.';
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + '.';
+        }
     })
     var nineId = document.getElementById('nine');
     nineId.addEventListener('click', function() {
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 9;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 9;
+        }
     })
 
     var sixId = document.getElementById('six');
@@ -98,7 +117,9 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 6;
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + 6;
+        }
     })
 
     var threeId = document.getElementById('three');
@@ -106,12 +127,25 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        calScreen.innerHTML = calScreen.innerHTML + 3;
+        if(calScreen.innerHTML.length <= 14) {
+           calScreen.innerHTML = calScreen.innerHTML + 3; 
+        }
+        
     })
     
     //adding systems buttons and their id's
-    var clearButton = systemsButtons[2];
+    var clearButton = systemsButtons[2]; //C button
     clearButton.addEventListener('click', function() {
+        calScreen.innerHTML = null;
+    })
+
+    var onButton = systemsButtons[0]; //On button
+    onButton.addEventListener('click', function() {
+        calScreen.innerHTML = 0;
+    })
+
+    var offButton = systemsButtons[1];
+    offButton.addEventListener('click', function() {
         calScreen.innerHTML = null;
     })
 
