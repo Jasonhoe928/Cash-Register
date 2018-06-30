@@ -4,20 +4,36 @@ var depositStorage;
 var balanceStorage;
 
 cashButtonsClass[0].addEventListener('click', function() { //deposit addEventListener
-    depositStorage = parseFloat(calScreen.innerHTML);
-    balanceStorage += depositStorage;
-    calScreen.innerHTML = null;
+    if(!depositStorage) {
+        depositStorage = parseFloat(calScreen.innerHTML);
+        balanceStorage = depositStorage;
+        calScreen.innerHTML = '$' + depositStorage + ' deposited';
+    }
+    else if(depositStorage && balanceStorage) {
+        depositStorage = parseFloat(calScreen.innerHTML);
+        balanceStorage += depositStorage;
+        calScreen.innerHTML = '$' + depositStorage + ' deposited';
+    } else {
+        calScreen.innerHTML = '$' + depositStorage + ' deposited';
+        depositStorage += depositStorage;
+        
+    }
+    setTimeout(function() {
+        calScreen.innerHTML = null;
+    }, 2000)
 })
 
 cashButtonsClass[1].addEventListener('click', function() { //withdrawal addEventListener
     var withdrawalStorage = parseFloat(calScreen.innerHTML);
     if(!balanceStorage) {
-       balanceStorage = depositStorage - withdrawalStorage;
+       calScreen.innerHTML = 'Insufficient funds';
     } else {
-        balanceStorage = balanceStorage - withdrawalStorage 
+        balanceStorage = balanceStorage - withdrawalStorage;
+        calScreen.innerHTML = '$' + withdrawalStorage + ' withdrawn';
     }
-    
-    calScreen.innerHTML = null;
+    setTimeout(function() {
+        calScreen.innerHTML = null;
+    }, 2000)
 })
 
 cashButtonsClass[2].addEventListener('click', function() { //balance addEventListener
@@ -26,4 +42,7 @@ cashButtonsClass[2].addEventListener('click', function() { //balance addEventLis
     } else {
         calScreen.innerHTML = 'Balance = $' + balanceStorage;
     }
+    setTimeout(function() {
+        calScreen.innerHTML = null;
+    }, 2000)
 })
