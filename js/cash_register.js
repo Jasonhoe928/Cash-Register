@@ -25,7 +25,7 @@ cashButtonsClass[0].addEventListener('click', function() { //deposit addEventLis
 
 cashButtonsClass[1].addEventListener('click', function() { //withdrawal addEventListener
     var withdrawalStorage = parseFloat(calScreen.innerHTML);
-    if(balanceStorage > withdrawalStorage) {
+    if(balanceStorage >= withdrawalStorage) {
         if (!balanceStorage) {
             calScreen.innerHTML = 'Insufficient funds';
         }
