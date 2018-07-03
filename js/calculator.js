@@ -98,9 +98,14 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        if(calScreen.innerHTML.length <= 14) {
-            calScreen.innerHTML = calScreen.innerHTML + '.';
+        if(calScreen.innerHTML === '.' || calScreen.innerHTML === 1 + '.' || calScreen.innerHTML === 2 + '.' || calScreen.innerHTML === 1 + '.'
+        || calScreen.innerHTML === 3 + '.' || calScreen.innerHTML === 4 + '.' || calScreen.innerHTML === 5 + '.' || calScreen.innerHTML === 6 + '.'
+        || calScreen.innerHTML === 7 + '.' || calScreen.innerHTML === 8 + '.' || calScreen.innerHTML === 9 + '.' || calScreen.innerHTML === 0 + '.') {
+            return;
         }
+            if(calScreen.innerHTML.length <= 14) {
+                calScreen.innerHTML = calScreen.innerHTML + '.';
+            }
     })
     var nineId = document.getElementById('nine');
     nineId.addEventListener('click', function() {
