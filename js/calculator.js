@@ -98,14 +98,17 @@
         if(calScreen.innerHTML === '-' || calScreen.innerHTML === '+' || calScreen.innerHTML === 'x' || calScreen.innerHTML === '/') {
             calScreen.innerHTML = null;
         }
-        if(calScreen.innerHTML === '.' || calScreen.innerHTML === 1 + '.' || calScreen.innerHTML === 2 + '.' || calScreen.innerHTML === 1 + '.'
-        || calScreen.innerHTML === 3 + '.' || calScreen.innerHTML === 4 + '.' || calScreen.innerHTML === 5 + '.' || calScreen.innerHTML === 6 + '.'
-        || calScreen.innerHTML === 7 + '.' || calScreen.innerHTML === 8 + '.' || calScreen.innerHTML === 9 + '.' || calScreen.innerHTML === 0 + '.') {
+        for(var i = 0; i < 10; i++) {
+            if(calScreen.innerHTML === i + '.' || calScreen.innerHTML === '.' || calScreen.innerHTML === i.toString() + i.toString() + '.'
+        || calScreen.innerHTML === i.toString() + i.toString() + i.toString() + '.' || calScreen.innerHTML === i.toString() + i.toString() + i.toString() + i.toString() + '.')
             return;
         }
-            if(calScreen.innerHTML.length <= 14) {
-                calScreen.innerHTML = calScreen.innerHTML + '.';
-            }
+        // if(calScreen.innerHTML === '.' || calScreen.innerHTML === 1 + '.' || calScreen.innerHTML === 2 + '.' || calScreen.innerHTML === 1 + '.'
+        // || calScreen.innerHTML === 3 + '.' || calScreen.innerHTML === 4 + '.' || calScreen.innerHTML === 5 + '.' || calScreen.innerHTML === 6 + '.'
+        // || calScreen.innerHTML === 7 + '.' || calScreen.innerHTML === 8 + '.' || calScreen.innerHTML === 9 + '.' || calScreen.innerHTML === 0 + '.') {
+        if(calScreen.innerHTML.length <= 14) {
+            calScreen.innerHTML = calScreen.innerHTML + '.';
+        }
     })
     var nineId = document.getElementById('nine');
     nineId.addEventListener('click', function() {
